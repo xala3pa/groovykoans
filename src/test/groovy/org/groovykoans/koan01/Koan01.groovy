@@ -42,8 +42,8 @@ class Koan01 extends GroovyTestCase {
 
         // Assign our variables the required values to continue...
         // ------------ START EDITING HERE ----------------------
-
-
+        assertion = true
+        hello =  "Hello"
         // ------------ STOP EDITING HERE  ----------------------
 
         assert assertion, 'Assign "true" to the "assertion" variable to proceed'
@@ -64,7 +64,7 @@ class Koan01 extends GroovyTestCase {
         // Create the target string with the ${} mechanism. Remember that ${} can contain method calls too!
         String result
         // ------------ START EDITING HERE ----------------------
-
+        result = "The size of the string '${greeting}' is ${4 * 4 + 10}"
 
         // ------------ STOP EDITING HERE  ----------------------
 
@@ -79,7 +79,7 @@ class Koan01 extends GroovyTestCase {
         // Concatenate the two values of 'right' and 'left' into result to proceed using Groovy syntax
         def result
         // ------------ START EDITING HERE ----------------------
-
+        result = map.right + map.left
 
         // ------------ STOP EDITING HERE  ----------------------
 
