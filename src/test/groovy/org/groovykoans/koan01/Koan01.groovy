@@ -101,7 +101,7 @@ class Koan01 extends GroovyTestCase {
         // Add the missing item to the Groovy list. Pay attention to the order of the items.
         // Hint: you can use either Java's add(int, String) or Groovy's plus() method.
         // ------------ START EDITING HERE ----------------------
-
+        groovyList = groovyList.plus(1,"Queen")
 
         // ------------ STOP EDITING HERE  ----------------------
 
@@ -143,7 +143,7 @@ class Koan01 extends GroovyTestCase {
         def message
         // ------------ START EDITING HERE ----------------------
 
-
+        message =  
         // ------------ STOP EDITING HERE  ----------------------
 
         // Note how Groovy doesn't require the 'return' keyword! It will simply return the last expression.
