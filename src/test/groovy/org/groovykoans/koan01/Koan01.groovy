@@ -142,8 +142,7 @@ class Koan01 extends GroovyTestCase {
     private String createMessageForUser(UserService userService) {
         def message
         // ------------ START EDITING HERE ----------------------
-
-        message =  
+	message = userService.getLoggedInUser() ? 'Hello Ronaldo!' : 'Hello Anonymous!'
         // ------------ STOP EDITING HERE  ----------------------
 
         // Note how Groovy doesn't require the 'return' keyword! It will simply return the last expression.
