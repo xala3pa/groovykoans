@@ -46,7 +46,7 @@ class Koan04 extends GroovyTestCase {
         // What is the result from the above execution?
         def expectedHelloClosureResult
         // ------------ START EDITING HERE ----------------------
-
+	expectedHelloClosureResult = 'Hello from Closure'
 
         // ------------ STOP EDITING HERE  ----------------------
         assert helloClosureResult == expectedHelloClosureResult
@@ -58,7 +58,7 @@ class Koan04 extends GroovyTestCase {
         // What is the result from the above execution?
         String expectedHelloRonalda
         // ------------ START EDITING HERE ----------------------
-
+	expectedHelloRonalda = 'Hello Ronalda'
 
         // ------------ STOP EDITING HERE  ----------------------
         assert helloRonalda == expectedHelloRonalda
@@ -72,7 +72,7 @@ class Koan04 extends GroovyTestCase {
         // What is the result from the above execution?
         def expectedHappyBirthdayGranger
         // ------------ START EDITING HERE ----------------------
-
+	expectedHappyBirthdayGranger = 'Happy Birthday To Hermione'
 
         // ------------ STOP EDITING HERE  ----------------------
         assert happyBirthdayGranger == expectedHappyBirthdayGranger
@@ -80,7 +80,9 @@ class Koan04 extends GroovyTestCase {
         // Create a closure that accepts two integers, adds them, and multiplies the result by two
         def resultClosure
         // ------------ START EDITING HERE ----------------------
-
+	resultClosure = {Integer i1, Integer i2 -> 
+		(i1 + i2) * 2
+	}
 
         // ------------ STOP EDITING HERE  ----------------------
 
@@ -113,7 +115,7 @@ class Koan04 extends GroovyTestCase {
 
         // Let's check that we got the same result (you can use the assertX methods)
         // ------------ START EDITING HERE ----------------------
-
+	assert groovyResult == ['two', 'three']
 
         // ------------ STOP EDITING HERE  ----------------------
 
@@ -129,7 +131,7 @@ class Koan04 extends GroovyTestCase {
         // What will monkeyColors contain?
         def expectedMonkeyColors = []
         // ------------ START EDITING HERE ----------------------
-
+	expectedMonkeyColors = ['blue', 'red', 'purple']
 
         // ------------ STOP EDITING HERE  ----------------------
         assert monkeyColors == expectedMonkeyColors
