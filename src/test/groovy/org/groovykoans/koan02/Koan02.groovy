@@ -44,8 +44,8 @@ class Koan02 extends GroovyTestCase {
         List<String> list = ['item']
 
         // ------------ START EDITING HERE ----------------------
-
-
+	map['dato1'] = 'hola'
+	list.clear()
         // ------------ STOP EDITING HERE  ----------------------
 
         assert map.asBoolean()
@@ -58,7 +58,8 @@ class Koan02 extends GroovyTestCase {
         String s2 = ''
 
         // ------------ START EDITING HERE ----------------------
-
+	s1 = ''
+	s2 = 'Non-empty string'
 
         // ------------ STOP EDITING HERE  ----------------------
 
@@ -75,8 +76,8 @@ class Koan02 extends GroovyTestCase {
 
         // Remove (or change) the offending integer to continue
         // ------------ START EDITING HERE ----------------------
-
-
+	balance = [2, -3, 5, 6]
+	
         // ------------ STOP EDITING HERE  ----------------------
 
         // Iterate through the list and AND the boolean values of its members.
