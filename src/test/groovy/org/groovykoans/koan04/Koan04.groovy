@@ -144,7 +144,10 @@ class Koan04 extends GroovyTestCase {
         StringWriter filteredResult = new StringWriter()
         def prefix = 'src/test/groovy/org/groovykoans/koan04/'
         // ------------ START EDITING HERE ----------------------
-
+	def file = new File("$prefix/exercise.txt")
+	file.filterLine(filteredResult) {String line ->
+		!line.startsWith('#')
+	}
 
         // ------------ STOP EDITING HERE  ----------------------
 
@@ -163,7 +166,7 @@ class Koan04 extends GroovyTestCase {
         // http://groovy.codehaus.org/groovy-jdk/java/lang/String.html
         def expectedCount
         // ------------ START EDITING HERE ----------------------
-
+	expectedCount = 3
 
         // ------------ STOP EDITING HERE  ----------------------
 
@@ -178,7 +181,7 @@ class Koan04 extends GroovyTestCase {
         // What will the value of mysteryList be?
         def expectedMysteryList
         // ------------ START EDITING HERE ----------------------
-
+	expectedMysteryList = ['Baby', 'Yeah']
 
         // ------------ STOP EDITING HERE  ----------------------
         assert mysteryList == expectedMysteryList
