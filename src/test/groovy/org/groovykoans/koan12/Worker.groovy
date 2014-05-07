@@ -14,9 +14,13 @@
  *  limitations under the License.
  */
 
-package org.groovykoans.koan08
+package org.groovykoans.koan12
 
-class Cartoon {
-    String name
-    Feeling feeling
+public interface Worker {
+
+    /**
+     * Performs some heavy calculations in order to increment the given number
+     */
+    int work(int number);
+
 }

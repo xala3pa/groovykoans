@@ -1,5 +1,5 @@
 /**
- * Copyright 2012 The original author or authors
+ * Copyright 2012-2013 The original author or authors
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
@@ -13,7 +13,7 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
- 
+
 package org.groovykoans.koan08
 
 /**
@@ -25,7 +25,7 @@ package org.groovykoans.koan08
 class Koan08 extends GroovyTestCase {
 
     void test01_SwitchStatements() {
-        // Some people consider switch-case clauses to be a code small because the same behavior can be
+        // Some people consider switch-case clauses to be a code smell because the same behavior can be
         // achieved using polymorphism. Having said that, let's look at what Groovy has to offer.
         // Have a read here: http://groovy.codehaus.org/Logical+Branching#LogicalBranching-switchstatement
 
@@ -94,7 +94,7 @@ class Koan08 extends GroovyTestCase {
         // http://groovy.codehaus.org/Multiple+Assignment
 
         // Create a closure that returns two random integers in a given range
-        def generateTwoRandomInts=  { int maxInt ->
+        def generateTwoRandomInts = { int maxInt ->
             // ------------ START EDITING HERE ----------------------
 
 

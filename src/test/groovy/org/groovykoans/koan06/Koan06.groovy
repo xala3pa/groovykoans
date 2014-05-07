@@ -1,5 +1,5 @@
 /**
- * Copyright 2012 The original author or authors
+ * Copyright 2012-2013 The original author or authors
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
@@ -13,7 +13,7 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
- 
+
 package org.groovykoans.koan06
 
 /**
@@ -50,7 +50,7 @@ class Koan06 extends GroovyTestCase {
     }
 
     void test02_CollectMethodOnLists() {
-        // We're often requires to iterate through a whole list and and perform some sort of transformation on
+        // We're often required to iterate through a whole list and and perform some sort of transformation on
         // some (or all) of the items, returning a new list. Groovy has a method just for that:
         // http://groovy.codehaus.org/groovy-jdk/java/lang/Object.html#collect(groovy.lang.Closure)
 

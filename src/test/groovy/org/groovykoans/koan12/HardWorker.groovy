@@ -14,9 +14,13 @@
  *  limitations under the License.
  */
 
-package org.groovykoans.koan08
+package org.groovykoans.koan12
 
-class Cartoon {
-    String name
-    Feeling feeling
+class HardWorker implements Worker {
+
+    @Override
+    int work(int number) {
+        Thread.sleep(1000)
+        return number + 10;
+    }
 }

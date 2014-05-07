@@ -14,9 +14,23 @@
  *  limitations under the License.
  */
 
-package org.groovykoans.koan08
+package org.groovykoans.koan12
 
-class Cartoon {
-    String name
-    Feeling feeling
+class Factory {
+
+    def numbers;
+    def worker;
+
+    // defaults to a Hard (and slow) Worker implementation
+    Factory(worker = new HardWorker(), def numbers) {
+        this.numbers = numbers;
+        this.worker = worker;
+    }
+
+    def work() {
+        numbers.collect {
+            worker.work(it)
+        }
+    }
+
 }

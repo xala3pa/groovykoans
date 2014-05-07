@@ -1,5 +1,5 @@
 /**
- * Copyright 2012 The original author or authors
+ * Copyright 2012-2013 The original author or authors
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
@@ -16,9 +16,8 @@
 
 package org.groovykoans.koan07
 
-import java.util.regex.Pattern
 import java.util.regex.Matcher
-
+import java.util.regex.Pattern
 /**
  * Koan07 - Regular Expressions
  *
@@ -44,7 +43,7 @@ class Koan07 extends GroovyTestCase {
 
 
         // ------------ STOP EDITING HERE  ----------------------
-        def result = technologies.findAll { it ==~ regexp }
+        def result = technologies.findAll { it==~regexp }
 
         assert result == ['Grails', 'Gradle']
     }
@@ -93,7 +92,7 @@ class Koan07 extends GroovyTestCase {
 
 
         // ------------ STOP EDITING HERE  ----------------------
-        def matcher = text =~ groovyRegExp
+        def matcher = text=~groovyRegExp
         def groovySum = matcher.collect { it[3].toInteger() }.sum()
 
         // ^^ Look how much more concise the Groovy code is! There's even a shorter version ahead...
@@ -104,7 +103,7 @@ class Koan07 extends GroovyTestCase {
         // Groovy is very useful for text manipulation, and as such regular expressions get 3 special operators:
         // ~str (tilde) : creates a Pattern object from a string. Equivalent to Pattern.compile(str)
         // str =~ pattern : creates a Matcher from a regex and a string. Same as Pattern.compile(pattern).matcher(str)
-        // str ==~ pattern : returns a boolean if pattern matches str. Same as Pattern.compile(pattern).matches()
+        // str ==~ pattern : returns a boolean if pattern matches str. Same as Pattern.matches(pattern, str)
         // More docs at http://groovy.codehaus.org/Regular+Expressions
 
         // This is how a Pattern object is defined in Java for an arbitrary phone number format
@@ -120,15 +119,14 @@ class Koan07 extends GroovyTestCase {
         assert patternInGroovy instanceof Pattern
         assertEquals(patternInJava.pattern(), patternInGroovy.pattern())
 
-
         // Once you have matches using the Groovy Matcher, you are able to iterate through them using the each() method.
         // Create a matcher and get the first names from the source text
         def names = 'John Lennon, Paul McCartney, George Harrison, Ringo Starr'
         def firstNamesList = []
         // ------------ START EDITING HERE ----------------------
-
-
-        // ------------ STOP EDITING HERE  ----------------------
+        
+	
+	// ------------ STOP EDITING HERE  ----------------------
         assert firstNamesList == ['John', 'Paul', 'George', 'Ringo']
 
         // And finally, using the ==~ operator, check if the the following number is a valid Visa card:
@@ -149,7 +147,7 @@ class Koan07 extends GroovyTestCase {
 
         // Using your newly acquired knowledge, create a regex that iterates all the words and replaces them using the
         // supplied dictionary.  E.g. 'this town is mad!' -> 'this ciudad is mad!'
-        def dictionary = ['town': 'ciudad', 'man':'hombre', 'life':'vida']
+        def dictionary = ['town': 'ciudad', 'man': 'hombre', 'life': 'vida']
         def song = '''|In the town where I was born
                       |Lived a man who sailed to sea
                       |And he told us of his life

@@ -14,9 +14,21 @@
  *  limitations under the License.
  */
 
-package org.groovykoans.koan08
+package org.groovykoans.koan12
 
-class Cartoon {
-    String name
-    Feeling feeling
+class StaticFactory {
+
+    List<Integer> numbers
+
+    public static Worker getWorker() {
+        new HardWorker()
+    }
+
+    List<Integer> work() {
+        numbers.collect {
+            getWorker().work(it)
+        }
+    }
+
+
 }
