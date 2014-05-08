@@ -43,8 +43,14 @@ class Koan06 extends GroovyTestCase {
         // Groovy-fy the above code, using StringBuilder and with() to get the same result in Groovy
         String groovyResult
         // ------------ START EDITING HERE ----------------------
+	def groovyStringBuilder = new StringBuilder().with{
+		append("roses are #FF0000\\n");
+		append("violets are #0000FF\\n");
+		append("all my base\\n")
+		append("are belong to you\\n")
+	}
 
-
+	groovyResult = groovyStringBuilder.toString();
         // ------------ STOP EDITING HERE  ----------------------
         assert groovyResult == javaResult
     }
@@ -59,7 +65,7 @@ class Koan06 extends GroovyTestCase {
         def differentTypes = [1, 'String', "GString", 'a', 'Another string', 0]
         def uniqueTypes = []
         // ------------ START EDITING HERE ----------------------
-
+	uniqueTypes = differentTypes.collect{ it.class}.unique()
 
         // ------------ STOP EDITING HERE  ----------------------
         assert uniqueTypes == [Integer, String]
@@ -73,8 +79,10 @@ class Koan06 extends GroovyTestCase {
         // under the src directory
         int count = 0
         // ------------ START EDITING HERE ----------------------
-
-
+	def file = new File('src/').eachFileRecurse{
+		if (!file.isDirectory() && file.text.contains('Lorem'))
+                count++
+	}
         // ------------ STOP EDITING HERE  ----------------------
         assert count == 3
 
