@@ -79,12 +79,12 @@ class Koan06 extends GroovyTestCase {
         // under the src directory
         int count = 0
         // ------------ START EDITING HERE ----------------------
-	def file = new File('src/').eachFileRecurse{
+	new File('src/').eachFileRecurse{ File file ->
 		if (!file.isDirectory() && file.text.contains('Lorem'))
                 count++
 	}
         // ------------ STOP EDITING HERE  ----------------------
-        assert count == 3
+        assert count == 5
 
     }
 
@@ -93,8 +93,11 @@ class Koan06 extends GroovyTestCase {
         // range objects, store all the prime numbers between 200 and 250 in the target variable
         def primesBetween200And250 = []
         // ------------ START EDITING HERE ----------------------
-
-
+	primesBetween200And250 = (200..250).findAll { candidate ->
+	    (2..<candidate).every { divisor ->
+		candidate % divisor != 0
+		}
+	}
         // ------------ STOP EDITING HERE  ----------------------
         assert primesBetween200And250 == [211, 223, 227, 229, 233, 239, 241]
 
