@@ -158,7 +158,9 @@ and can become difficult to maintain"""
                       |In the land of submarines'''.stripMargin()
         def result
         // ------------ START EDITING HERE ----------------------
-
+	dictionary.each {key, value -> 
+		result = song.replaceAll("${key}","${value}")
+	} 
 
         // ------------ STOP EDITING HERE  ----------------------
 
