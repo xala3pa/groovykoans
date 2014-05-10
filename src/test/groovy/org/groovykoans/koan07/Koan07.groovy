@@ -159,9 +159,9 @@ and can become difficult to maintain"""
         def result
         // ------------ START EDITING HERE ----------------------
 	dictionary.each {key, value -> 
-		result = song.replaceAll("${key}","${value}")
+		song = song.replaceAll("${key}","${value}")
 	} 
-
+	result = song
         // ------------ STOP EDITING HERE  ----------------------
 
         def expected = '''|In the ciudad where I was born
@@ -186,7 +186,14 @@ and can become difficult to maintain"""
         // create the same regular expression to sum the total leftovers, but this time document the regex
         String regexp
         // ------------ START EDITING HERE ----------------------
-
+	regexp = """(?x)   #comments are now allowed
+		    (?sm)  # multiline
+		    (.*?)  # item name
+		    \\s+   # spaces
+		    (\\d+) # sold amounts
+		    \\s+   # spaces
+		    (\\d+) # leftover amounts
+		    """
 
         // ------------ STOP EDITING HERE  ----------------------
         def sum = text.findAll(regexp) { it[3].toInteger() }.sum()
