@@ -106,8 +106,8 @@ class Koan08 extends GroovyTestCase {
         // Create a closure that returns two random integers in a given range
         def generateTwoRandomInts = { int maxInt ->
             // ------------ START EDITING HERE ----------------------
-
-
+		def random = new Random()
+		[random.nextInt(maxInt), random.nextInt(maxInt)]
             // ------------ STOP EDITING HERE  ----------------------
         }
 
