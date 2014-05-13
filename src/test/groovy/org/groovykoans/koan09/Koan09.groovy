@@ -60,8 +60,9 @@ class Koan09 extends GroovyTestCase {
         // Using the NukeInterceptor, make sure that only admin is allowed to run this service.
         def proxy
         // ------------ START EDITING HERE ----------------------
-
-
+	proxy = ProxyMetaClass.getInstance(SensitiveService)
+	def interceptor = new NukeInterceptor()
+	proxy.interceptor = interceptor
         // ------------ STOP EDITING HERE  ----------------------
 
         proxy.use {
