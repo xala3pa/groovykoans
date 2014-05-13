@@ -40,7 +40,10 @@ class Koan09 extends GroovyTestCase {
         // add a sayHello() method that returns "Hello from ${firstName}"
         def expando = new Expando()
         // ------------ START EDITING HERE ----------------------
-
+	expando.firstName = 'Alvaro'
+	expando.sayHello = { ->
+		"Hello from ${firstName}"
+	}
 
         // ------------ STOP EDITING HERE  ----------------------
 
