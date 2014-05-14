@@ -20,7 +20,8 @@ import org.codehaus.groovy.runtime.InvokerHelper
 
 class Robot {
     // ------------ START EDITING HERE ----------------------
-
+	Integer x = 0
+	Integer y = 0
 
     // ------------ STOP EDITING HERE  ----------------------
 }
