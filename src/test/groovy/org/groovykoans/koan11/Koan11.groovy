@@ -63,7 +63,7 @@ class Koan11 extends GroovyTestCase {
         Sql.withInstance('jdbc:h2:mem:groovyDb2', 'sa', '', 'org.h2.Driver') { db ->
             db.execute(CREATE_STMT)
             // ------------ START EDITING HERE ----------------------
-
+	    db.execute('insert into Person (FIRSTNAME,LASTNAME) values (?,?)',['Jack','Dawson'])
 
             // ------------ STOP EDITING HERE  ----------------------
             assert db.firstRow('select count(*) c from Person').c == 1
